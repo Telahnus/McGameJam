@@ -3,12 +3,9 @@ using System.Collections;
 
 public class VoterScript : MonoBehaviour {
 
-    public GameObject curState;
     public int myOwner;
     public string curAction;
     public GameObject destination;
-    public bool engaged;
-    public bool atDestination;
     // stuff for wandering
     public float wanderRange;
     private Vector3 wanderTarget;
@@ -24,7 +21,7 @@ public class VoterScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (atDestination)
+	    if (curAction=="atdestination")
         {
             if (Time.time > nextActionTime)
             {
