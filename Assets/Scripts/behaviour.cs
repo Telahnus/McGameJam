@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Boo.Lang;
 
 public class behaviour : MonoBehaviour
 {
@@ -66,9 +67,8 @@ public class behaviour : MonoBehaviour
     //determine units in an area
     void updateVotersInState()
     {
-        //determine how many units are in the sphere of influence of the state
-        Vector3 centre = thisState.transform.position;
-        Collider[] voterList = Physics.OverlapSphere(centre, 3);
+
+        Collider[] voterList = listOfVoters();
 
         int i = 0;
         neutralVoters = 0;
@@ -98,6 +98,13 @@ public class behaviour : MonoBehaviour
 
         // check that shit though
         if (areAllForeignVotersTheSame()) { updateOwner(); }
+    }
+
+    private Collider[] listOfVoters()
+    {
+        //determine how many units are in the sphere of influence of the state
+        Vector3 centre = thisState.transform.position;
+        return Physics.OverlapSphere(centre, 3);
     }
 
     //returns a true or false depending on whether all the foreign voters in a state are of the same owner
@@ -142,6 +149,49 @@ public class behaviour : MonoBehaviour
     private void updateOwner()
     {
         //ADD CODE TO CHANGE MATERIAL OF RING TO REFLECT NEW OWNER
+    }
+
+    private void listOfLocallyOwnedLocalVoters()
+    {
+        Collider[] tempCollider = listOfVoters();
+        List<GameObject> listOfLocalVoters = new List<GameObject>();
+        for (int i = 0; i < tempCollider.Length; i++) 
+        {
+            VoterScript voterTemp = tempCollider[i].GetComponent<VoterScript>();
+            switch (voterTemp.myOwner)
+            {
+                case 0:
+                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 0)
+                    {
+                        listOfLocalVoters.Add(tempCollider[i].gameObject);
+                    }
+                    break;
+                case 1:
+                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 1)
+                    {
+                        listOfLocalVoters.Add(tempCollider[i].gameObject);
+                    }
+                    break;
+                case 2:
+                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 2)
+                    {
+                        listOfLocalVoters.Add(tempCollider[i].gameObject);
+                    }
+                    break;
+                case 3:
+                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 3)
+                    {
+                        listOfLocalVoters.Add(tempCollider[i].gameObject);
+                    }
+                    break;
+                case 4:
+                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 4)
+                    {
+                        listOfLocalVoters.Add(tempCollider[i].gameObject);
+                    }
+                    break;
+            }
+        }
     }
 
 }
