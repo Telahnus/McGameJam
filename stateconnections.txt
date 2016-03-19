@@ -1,0 +1,213 @@
+Connections
+
+1. Washington
+	- 2.Oregon
+	- 5.Idaho
+
+2. Oregon
+	- 1. Washington
+	- 5. Idaho
+
+3. California
+	- 4. Nevada
+	- 10. New Mexico
+
+4. Nevada
+	- 2. Oregon
+	- 3. California
+	- 5. Idaho
+	- 6. Montana
+
+5. Idaho
+	- 1. Washington
+	- 4. Nevada
+	- 7. Wyoming
+	- 8. Utah
+	- 9. Arizona
+
+6. Montana
+	- 5. Idaho
+	- 7. Wyoming
+	- 17. N. Dakota
+
+7. Wyoming
+	- 5. Idaho
+	- 6. Montana
+	- 8. Utah
+	- 10. Colorado
+	- 17. N. Dakota
+	- 16. S. Dakota
+	- 15. Nebraska
+
+8. Utah
+	- 5. Idaho
+	- 4. Nevada
+	- 7. Wyoming
+	- 9. Arizona
+	- 10. Colorado
+
+9. Arizona
+	- 3. California
+	- 4. Nevada
+	- 8. Utah
+	- 11. New Mexico
+
+10. Colorado
+	- 7. Wyoming
+	- 8. Utah
+	- 11. New Mexico
+	- 14. Kansas
+	- 15. Nebraska
+
+11. New Mexico
+	- 8. Utah
+	- 9. Arizona
+	- 10. Colorado
+
+12. Texas
+	- 11. New Mexico
+	- 13. Oklakoma
+	- 22. Louisiana
+
+13. Oklahoma
+	- 12. Texas
+	- 14. Kansas
+	- 21. Arkansas
+
+14. Kansas
+	- 10. Colorado 
+	- 13. Oklahoma
+	- 15. Nebraska
+	- 20. Missouri
+
+15. Nebraska
+	- 7. Wyoming
+	- 10. Colorado
+	- 14. Kansas
+	- 16. S. Dakota
+	- 19. Iowa
+
+16. S. Dakota
+	- 7. Wyoming
+	- 14. Nebraska
+	- 17. N. Dakota
+	- 18. Minnesota
+
+17. N. Dakota
+	- 6. Montana
+	- 16. S. Dakota
+	- 18. Minnesota
+
+18. Minnesota
+	- 16. S. Dakota
+	- 17. N. Dakota
+	- 19. Iowa
+	- 26. Wisconsin
+
+19. Iowa
+	- 15. Nebraska
+	- 20. Missouri
+	- 25. Illinois
+
+20. Missouri
+	- 14. Kansas
+	- 19. Iowa
+	- 21. Arkansas
+	- 25. Illinois
+
+21. Arkansas
+	- 13. Oklahoma
+	- 22. Louisiana
+	- 23. Mississipi
+	- 24. Tennessee
+
+22. Louisiana
+	- 12. Texas
+	- 21. Arkansas
+	- 23. Mississipi
+
+23. Mississipi
+	- 21. Arkansas
+	- 22. Louisiana
+	- 24. Tennessee
+	- 32. Alabama
+
+24. Tennessee
+	- 21. Arkansas
+	- 23. Mississipi
+	- 30. Kentucky
+	- 31. East Coast
+	- 32. Alabama
+
+25. Illinois
+	- 19. Iowa
+	- 20. Missouri
+	- 26. Wisconsin
+	- 27. Indiana
+
+26. Wisconsin
+	- 18. Minnesota
+	- 25. Illinois
+	- 28. Michigan
+
+27. Indiana
+	- 25. Illinois
+	- 28. Michigan
+	- 29. Ohio
+	- 30. Kentucky
+
+28. Michigan
+	- 26. Wisconsin
+	- 27. Indiana
+	- 29. Ohio
+
+29. Ohio
+	- 27. Indiana
+	- 28. Michigan
+	- 30. Kentucky
+	- 34. W. Virginia
+	- 35. Pennsylvania
+
+30. Kentucky
+	- 24. Tennessee
+	- 27. Indiana
+	- 29. Ohio
+	- 34. W. Virginia
+
+31. East Coast
+	- 24. Tennessee
+	- 32. Alabama
+	- 33. Florida
+	- 34. W. Virginia
+	- 35. Pennsylvania
+
+32. Alabama
+	- 23. Mississipi
+	- 24. Tennessee
+	- 31. East Coast
+	- 33. Florida
+
+33. Florida
+	- 31. East Coast
+	- 32. Alabama
+
+34. W. Virginia
+	- 29. Ohio
+	- 30. Kentucky
+	- 31. East Coast
+
+35. Pennsylvania
+	- 29. Ohio
+	- 31. East Coast
+	- 36. New York
+
+36. New York
+	- 35. Pennsylvania
+	- 37. New England
+
+37. New England
+	- 36. New York
+
+
+
+
