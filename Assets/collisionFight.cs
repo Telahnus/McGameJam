@@ -12,7 +12,6 @@ public class collisionFight : MonoBehaviour {
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.name == "testCube") {
 			Destroy(col.gameObject);
-			RigidbodyConstraints.FreezeAll;
 		}
 	}
 }
