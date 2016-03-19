@@ -586,7 +586,7 @@ GameObject:
   - 23: {fileID: 944933935}
   - 82: {fileID: 944933934}
   m_Layer: 0
-  m_Name: Quad (1)
+  m_Name: Speaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
