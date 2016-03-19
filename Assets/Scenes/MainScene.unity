@@ -1144,6 +1144,7 @@ MonoBehaviour:
   trumpVoters: 0
   cruzVoters: 0
   kasichVoters: 0
+  totalVoters: 0
 --- !u!1001 &1241457076
 Prefab:
   m_ObjectHideFlags: 0

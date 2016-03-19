@@ -12,9 +12,10 @@ public class SelectMvt : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if (Physics.Raycast (ray, out hit)) {
-				Component halo = GetComponent ("Halo");
-				halo.GetType ().GetProperty ("enabled").SetValue (halo, false, null);
-			}
+                GameObject go = hit.transform.gameObject;
+                Component halo = GetComponent("Halo");
+                halo.GetType().GetProperty("enabled").SetValue(halo, true, null);
+            }
 		}
 	}
 
