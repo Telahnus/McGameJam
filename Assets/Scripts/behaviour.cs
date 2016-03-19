@@ -89,7 +89,7 @@ public class behaviour : MonoBehaviour
         }
 
         // check that shit though
-        if (areAllForeignVotersTheSame()) { updateOwner(); }
+        if (totalVoters != 0 && areAllForeignVotersTheSame()) { updateOwner(); }
     }
 
     private Collider[] listOfVoters()
