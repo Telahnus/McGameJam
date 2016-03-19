@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class behaviour : MonoBehaviour {
+public class behaviour : MonoBehaviour
+{
     public int owner;
     public string destination;
     public string thisDestination;
@@ -13,9 +14,11 @@ public class behaviour : MonoBehaviour {
     public int foreignVoterCount;
     //public float startWait;
     //public float waveWait;
+    private static GameObject thisState;
 
     void Start()
     {
+        thisState = this.gameObject;
         StartCoroutine(SpawnWaves());
     }
 
@@ -34,7 +37,8 @@ public class behaviour : MonoBehaviour {
                 {
                     temp = Instantiate(minicube, spawnPosition, spawnRotation);
                 }
-            } else {
+            }
+            else {
                 temp = Instantiate(minicube, spawnPosition, spawnRotation);
             }
             //tempOwner = temp.owner;
@@ -48,10 +52,10 @@ public class behaviour : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         updateVotersInState();
-	}
+    }
 
     //updates the variables containing information on voters in each state
     void updateVotersInState()
@@ -77,18 +81,18 @@ public class behaviour : MonoBehaviour {
     //updates the owner based on current foreign attacker
     private void updateOwner()
     {
-        
+
         //owner = find the owner ;
     }
 
     //determine units in an area
     void votersInState()
     {
-        private Vector3 centre = Transform.position;
+        private Vector3 centre = thisState.transform.position;
         Collider[] voterList = Physics.OverlapSphere(centre, 3);
         //int ownerTemp = voterList[0].gameObject.owner;
         int i = 1;
-        while (i < voterList.Length)
+        while (i<voterList.Length)
         {
             /*
             if (voterList[i].gameObject.owner != ownerTemp)
