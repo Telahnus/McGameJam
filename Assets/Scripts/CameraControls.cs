@@ -2,10 +2,17 @@
 using System.Collections;
 
 public class CameraControls : MonoBehaviour {
+
     public float zoomSpeed;
     public Camera minimap;
     public float minzoom;
     public float maxzoom;
+
+    void Start()
+    {
+        minzoom = 5;
+        maxzoom = 40;
+    }
 
 	void Update () {
 
