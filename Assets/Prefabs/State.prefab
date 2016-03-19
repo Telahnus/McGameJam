@@ -197,12 +197,16 @@ MonoBehaviour:
   owner: 0
   destination: 
   thisDestination: 
-  minicube: {fileID: 133202, guid: 92eb988ce02081b49a6b97962b9a6404, type: 2}
+  voter: {fileID: 0}
   garrisonValue: 5
   spawnWait: 1
   spawnValues: {x: 0, y: 0, z: 0}
-  localVoterCount: 0
-  foreignVoterCount: 0
+  neutralVoters: 0
+  khaledVoters: 0
+  trumpVoters: 0
+  cruzVoters: 0
+  kasichVoters: 0
+  totalVoters: 0
 --- !u!136 &13647256
 CapsuleCollider:
   m_ObjectHideFlags: 1

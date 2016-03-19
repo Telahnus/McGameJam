@@ -15,6 +15,7 @@ public class behaviour : MonoBehaviour
     public int trumpVoters;
     public int cruzVoters;
     public int kasichVoters;
+    public int totalVoters;
     //public float startWait;
     //public float waveWait;
     private static GameObject thisState;
@@ -95,37 +96,51 @@ public class behaviour : MonoBehaviour
             i++;
         }
 
-        /*if (localVoterCount == 0 && areAllForeignVotersTheSame() == true)
-        {
-            updateOwner();
-        }*/
+        // check that shit though
+        if (areAllForeignVotersTheSame()) { updateOwner(); }
     }
 
-    //returns a true or false depending on whether all the foreign voters in a state are of the 
-    // same owner
+    //returns a true or false depending on whether all the foreign voters in a state are of the same owner
+    //true means that owner will change. Flase will not
     private bool areAllForeignVotersTheSame()
     {
+        totalVoters = neutralVoters + khaledVoters + trumpVoters + cruzVoters + kasichVoters;
         switch (owner)
         {
             case 0:
-
+                if (khaledVoters == totalVoters) { owner = 1; return true; }
+                if (trumpVoters == totalVoters) { owner = 2; return true; }
+                if (cruzVoters == totalVoters) { owner = 3; return true; }
+                if (kasichVoters == totalVoters) { owner = 4; return true; }
                 break;
             case 1:
+                if (trumpVoters == totalVoters) { owner = 2; return true; }
+                if (cruzVoters == totalVoters) { owner = 3; return true; }
+                if (kasichVoters == totalVoters) { owner = 4; return true; }
                 break;
             case 2:
+                if (khaledVoters == totalVoters) { owner = 1; return true; }
+                if (cruzVoters == totalVoters) { owner = 3; return true; }
+                if (kasichVoters == totalVoters) { owner = 4; return true; }
                 break;
             case 3:
+                if (khaledVoters == totalVoters) { owner = 1; return true; }
+                if (trumpVoters == totalVoters) { owner = 2; return true; }
+                if (kasichVoters == totalVoters) { owner = 4; return true; }
                 break;
             case 4:
+                if (khaledVoters == totalVoters) { owner = 1; return true; }
+                if (trumpVoters == totalVoters) { owner = 2; return true; }
+                if (cruzVoters == totalVoters) { owner = 3; return true; }
                 break;
         }
+
         return false;  
     }
 
     //updates the owner based on current foreign attacker
-    private void updateOwner(int newOwner)
+    private void updateOwner()
     {
-        owner = newOwner;
         //ADD CODE TO CHANGE MATERIAL OF RING TO REFLECT NEW OWNER
     }
 
