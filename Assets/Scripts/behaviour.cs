@@ -10,8 +10,11 @@ public class behaviour : MonoBehaviour
     public int garrisonValue;
     public float spawnWait;
     public Vector3 spawnValues;
-    public int localVoterCount;
-    public int foreignVoterCount;
+    public int neutralVoters;
+    public int khaledVoters;
+    public int trumpVoters;
+    public int cruzVoters;
+    public int kasichVoters;
     //public float startWait;
     //public float waveWait;
     private static GameObject thisState;
@@ -35,10 +38,10 @@ public class behaviour : MonoBehaviour
             //check for neutral state, they shouldn't be too high
             if (owner == 0)
             {
-                if (localVoterCount != garrisonValue)
+                /*if (localVoterCount != garrisonValue)
                 {
                     temp = Instantiate(voter, spawnPosition, spawnRotation);
-                }
+                }*/
             }
             else {
                 temp = Instantiate(voter, spawnPosition, spawnRotation);
@@ -59,26 +62,6 @@ public class behaviour : MonoBehaviour
         updateVotersInState();
     }
 
-    //updates the variables containing information on voters in each state
-    void updateVotersInState()
-    {
-        //determine how many units are in the sphere of influence of the state
-        //report those numbers by changing the variable localVoterCount/foreignVoterCount
-        localVoterCount = 0;
-        foreignVoterCount = 0;
-        //if local voters all killed and all voters are from same enemy, update owner of state
-        if (localVoterCount == 0 && areAllForeignVotersTheSame() == true)
-        {
-            updateOwner();
-        }
-    }
-
-    //returns a true or false depending on whether all the foreign voters in a state are of the 
-    // same owner
-    private bool areAllForeignVotersTheSame()
-    {
-        return true;
-    }
 
     //updates the owner based on current foreign attacker
     private void updateOwner()
@@ -88,23 +71,64 @@ public class behaviour : MonoBehaviour
     }
 
     //determine units in an area
-    void votersInState()
+    void updateVotersInState()
     {
+        //determine how many units are in the sphere of influence of the state
         Vector3 centre = thisState.transform.position;
         Collider[] voterList = Physics.OverlapSphere(centre, 3);
-        //int ownerTemp = voterList[0].gameObject.owner;
-        int i = 1;
-        while (i<voterList.Length)
+
+        int i = 0;
+        neutralVoters = 0;
+        khaledVoters = 0;
+        trumpVoters = 0;
+        cruzVoters = 0;
+        kasichVoters = 0;
+        while (i<voterList.Length && voterList[i].gameObject == voter)
         {
-            /*
-            if (voterList[i].gameObject.owner != ownerTemp)
+            VoterScript voterTemp = voterList[0].GetComponent<VoterScript>();
+            switch (voterTemp.myOwner)
             {
+                case 0:
+                    neutralVoters++; break;
+                case 1:
+                    khaledVoters++; break;
+                case 2:
+                    trumpVoters++; break;
+                case 3:
+                    cruzVoters++; break;
+                case 4:
+                    kasichVoters++; break;
 
             }
-            */
             i++;
         }
+
+        /*if (localVoterCount == 0 && areAllForeignVotersTheSame() == true)
+        {
+            updateOwner();
+        }*/
     }
+
+    //returns a true or false depending on whether all the foreign voters in a state are of the 
+    // same owner
+    private bool areAllForeignVotersTheSame()
+    {
+        switch (owner)
+        {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+        }
+        return false;  
+    }
+
 
 
 }
