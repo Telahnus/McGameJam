@@ -712,6 +712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomSpeed: 5
   minimap: {fileID: 1039974125}
+  minzoom: 0
+  maxzoom: 0
 --- !u!81 &1039974122
 AudioListener:
   m_ObjectHideFlags: 0
@@ -753,7 +755,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 19.6
+  orthographic size: 35
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -774,7 +776,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1039974120}
   m_LocalRotation: {x: -0.6942581, y: 0.0032387176, z: -0.003124183, w: -0.7197121}
-  m_LocalPosition: {x: -2.7, y: 709.05, z: -20}
+  m_LocalPosition: {x: 0, y: 709.05, z: -24}
   m_LocalScale: {x: 1, y: 50.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
