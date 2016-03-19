@@ -6,7 +6,7 @@ public class behaviour : MonoBehaviour
     public int owner;
     public string destination;
     public string thisDestination;
-    public GameObject minicube;
+    public GameObject voter;
     public int garrisonValue;
     public float spawnWait;
     public Vector3 spawnValues;
@@ -35,11 +35,11 @@ public class behaviour : MonoBehaviour
             {
                 if (localVoterCount != garrisonValue)
                 {
-                    temp = Instantiate(minicube, spawnPosition, spawnRotation);
+                    temp = Instantiate(voter, spawnPosition, spawnRotation);
                 }
             }
             else {
-                temp = Instantiate(minicube, spawnPosition, spawnRotation);
+                temp = Instantiate(voter, spawnPosition, spawnRotation);
             }
             //tempOwner = temp.owner;
             //switch (tempOwner) {
@@ -88,7 +88,7 @@ public class behaviour : MonoBehaviour
     //determine units in an area
     void votersInState()
     {
-        private Vector3 centre = thisState.transform.position;
+        Vector3 centre = thisState.transform.position;
         Collider[] voterList = Physics.OverlapSphere(centre, 3);
         //int ownerTemp = voterList[0].gameObject.owner;
         int i = 1;
