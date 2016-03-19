@@ -77,7 +77,27 @@ public class behaviour : MonoBehaviour {
     //updates the owner based on current foreign attacker
     private void updateOwner()
     {
+        
         //owner = find the owner ;
+    }
+
+    //determine units in an area
+    void votersInState()
+    {
+        private Vector3 centre = Transform.position;
+        Collider[] voterList = Physics.OverlapSphere(centre, 3);
+        //int ownerTemp = voterList[0].gameObject.owner;
+        int i = 1;
+        while (i < voterList.Length)
+        {
+            /*
+            if (voterList[i].gameObject.owner != ownerTemp)
+            {
+
+            }
+            */
+            i++;
+        }
     }
 
 
