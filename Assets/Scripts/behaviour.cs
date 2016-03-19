@@ -38,16 +38,8 @@ public class behaviour : MonoBehaviour
 			Quaternion spawnRotation = Quaternion.identity;
             Object temp = null;
             //check for neutral state, they shouldn't be too high
-            if (owner == 0)
-            {
-                /*if (localVoterCount != garrisonValue)
-                {
-                    temp = Instantiate(voter, spawnPosition, spawnRotation);
-                }*/
-            }
-            else {
-                temp = Instantiate(voter, spawnPosition, spawnRotation);
-            }
+
+            temp = Instantiate(voter, spawnPosition, spawnRotation);
             //tempOwner = temp.owner;
             //switch (tempOwner) {
             // case 0:
