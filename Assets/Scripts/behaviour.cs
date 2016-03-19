@@ -5,7 +5,7 @@ public class behaviour : MonoBehaviour {
     public int owner;
     public string destination;
     public string thisDestination;
-    public GameObject voter;
+    public GameObject minicube;
     public int garrisonValue;
     public float spawnWait;
     public Vector3 spawnValues;
@@ -32,10 +32,10 @@ public class behaviour : MonoBehaviour {
             {
                 if (localVoterCount != garrisonValue)
                 {
-                    temp = Instantiate(voter, spawnPosition, spawnRotation);
+                    temp = Instantiate(minicube, spawnPosition, spawnRotation);
                 }
             } else {
-                temp = Instantiate(voter, spawnPosition, spawnRotation);
+                temp = Instantiate(minicube, spawnPosition, spawnRotation);
             }
             //tempOwner = temp.owner;
             //switch (tempOwner) {
