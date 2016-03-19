@@ -9,9 +9,11 @@ public class collisionFight : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void OnCollisionEnter(Collision col){
+	IEnumerator OnCollisionEnter(Collision col){
 		if (col.gameObject.name == "testCube") {
+			yield return new WaitForSeconds (0.2f);
 			Destroy(col.gameObject);
+			Destroy (gameObject);
 		}
 	}
 }
