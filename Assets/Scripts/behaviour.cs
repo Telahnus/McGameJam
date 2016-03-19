@@ -15,6 +15,7 @@ public class behaviour : MonoBehaviour
     public int trumpVoters;
     public int cruzVoters;
     public int kasichVoters;
+    public int totalVoters;
     //public float startWait;
     //public float waveWait;
     private static GameObject thisState;
@@ -95,16 +96,24 @@ public class behaviour : MonoBehaviour
             i++;
         }
 
-        /*if (localVoterCount == 0 && areAllForeignVotersTheSame() == true)
+        totalVoters = neutralVoters + khaledVoters + trumpVoters + cruzVoters + kasichVoters;
+        switch (owner)
         {
-            updateOwner();
-        }*/
+            case 0:
+                if (neutralVoters == totalVoters)
+                {
+                    
+                }
+                break;
+        }
+
     }
 
     //returns a true or false depending on whether all the foreign voters in a state are of the 
     // same owner
     private bool areAllForeignVotersTheSame()
     {
+        /*
         switch (owner)
         {
             case 0:
@@ -118,8 +127,8 @@ public class behaviour : MonoBehaviour
                 break;
             case 4:
                 break;
-        }
-        return false;  
+        } */
+        return true;  
     }
 
     //updates the owner based on current foreign attacker
