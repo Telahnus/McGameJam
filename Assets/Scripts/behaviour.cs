@@ -62,14 +62,6 @@ public class behaviour : MonoBehaviour
         updateVotersInState();
     }
 
-
-    //updates the owner based on current foreign attacker
-    private void updateOwner()
-    {
-
-        //owner = find the owner ;
-    }
-
     //determine units in an area
     void updateVotersInState()
     {
@@ -116,6 +108,7 @@ public class behaviour : MonoBehaviour
         switch (owner)
         {
             case 0:
+
                 break;
             case 1:
                 break;
@@ -129,6 +122,11 @@ public class behaviour : MonoBehaviour
         return false;  
     }
 
-
+    //updates the owner based on current foreign attacker
+    private void updateOwner(int newOwner)
+    {
+        owner = newOwner;
+        //ADD CODE TO CHANGE MATERIAL OF RING TO REFLECT NEW OWNER
+    }
 
 }
