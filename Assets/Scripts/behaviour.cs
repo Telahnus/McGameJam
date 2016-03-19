@@ -28,7 +28,9 @@ public class behaviour : MonoBehaviour
         while (true)
         {
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z));
-            Quaternion spawnRotation = Quaternion.identity;
+			Vector3 myPosition = transform.position;
+			spawnPosition += myPosition;
+			Quaternion spawnRotation = Quaternion.identity;
             Object temp = null;
             //check for neutral state, they shouldn't be too high
             if (owner == 0)

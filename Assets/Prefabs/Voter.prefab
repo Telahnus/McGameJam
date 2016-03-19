@@ -12,6 +12,8 @@ GameObject:
   - 65: {fileID: 6550468}
   - 23: {fileID: 2301102}
   - 114: {fileID: 11498772}
+  - 114: {fileID: 11420178}
+  - 114: {fileID: 11481938}
   m_Layer: 0
   m_Name: Voter
   m_TagString: Untagged
@@ -76,6 +78,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11420178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409127cbd21c46c488ff3d7a0a20a8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &11481938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b754d44b356c5f4682175ca4d1aaca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11498772
 MonoBehaviour:
   m_ObjectHideFlags: 1
