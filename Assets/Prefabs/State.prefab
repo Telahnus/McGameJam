@@ -60,7 +60,7 @@ GameObject:
   - 136: {fileID: 13647256}
   - 23: {fileID: 2337282}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
