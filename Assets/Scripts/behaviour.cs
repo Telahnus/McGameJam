@@ -177,6 +177,12 @@ public class behaviour : MonoBehaviour
     //updates the owner based on current foreign attacker
     private void updateOwner()
     {
+        GameObject tempEngine = GameObject.FindGameObjectWithTag("Engine");
+        Engine tempEnginerScript = tempEngine.GetComponent<Engine>();
+        if (tempEnginerScript.isWin())
+        {
+
+        }
         //ADD CODE TO CHECK VICTORY
         //ADD CODE TO CHANGE COLOUR (MATERIAL) OF PROVINCE TO NEW OWNER'S
     }
