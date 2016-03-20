@@ -68,18 +68,23 @@ public class behaviour : MonoBehaviour
             switch (owner) {
                 case 0:
                     tempRenderer.material = neutralMaterialRef;
+                    tempVoterScript.myOwner = 0;
                     break;
                 case 1:
                     tempRenderer.material = khaledMaterialRef;
+                    tempVoterScript.myOwner = 1;
                     break;
                 case 2:
                     tempRenderer.material = trumpMaterialRef;
+                    tempVoterScript.myOwner = 2;
                     break;
                 case 3:
                     tempRenderer.material = cruzMaterialRef;
+                    tempVoterScript.myOwner = 3;
                     break;
                 case 4:
                     tempRenderer.material = kasichMaterialRef;
+                    tempVoterScript.myOwner = 4;
                     break;
             }
 

@@ -27,28 +27,34 @@ public class SelectMvt : MonoBehaviour {
 	}
 	void OnMouseDown(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit) && hit.transform.gameObject.name=="hitbox") {
-			GameObject go = hit.transform.gameObject;
+		RaycastHit hitDown;
+		if (Physics.Raycast (ray, out hitDown) && hitDown.transform.gameObject.name=="hitbox") {
+			GameObject go = hitDown.transform.gameObject;
 			behaviour temp = go.GetComponentInParent<behaviour>();
 			lolv = temp.listOfLocallyOwnedLocalVoters();
 		}
 	}
 	void OnMouseUp(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit) && hit.transform.gameObject.name=="hitbox") {
-			GameObject go = hit.transform.gameObject;
-			target = new Vector3 (hit.point.x, 1.0f, hit.point.z);
-			for (int i = 0; i < lolv.Count; i++) {
-				VoterScript otherTemp = lolv [i].GetComponent<VoterScript>();
-				otherTemp.curAction = "NotChilling";
-				lolv[i].transform.position = Vector3.MoveTowards (transform.position, target, 1.0f * Time.deltaTime);
-			}
+		RaycastHit hitUp;
+		if (Physics.Raycast(ray, out hitUp) && hitUp.transform.gameObject.name=="hitbox") {
+			GameObject go = hitUp.transform.gameObject;
+			target = new Vector3 (hitUp.point.x, 1.0f, hitUp.point.z);
+            movement(target);
 		}
 		count = 0;
 		shutDownLights();
 	}
+
+    void movement(Vector3 target)
+    {
+        for (int i = 0; i < lolv.Count; i++)
+        {
+            VoterScript otherTemp = lolv[i].GetComponent<VoterScript>();
+            otherTemp.curAction = "NotChilling";
+            lolv[i].transform.position = Vector3.MoveTowards(transform.position, target, 1.0f * Time.deltaTime);
+        }
+    }
 
 	void shutDownLights(){
 		while (count < cylinders.Length) {
