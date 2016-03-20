@@ -171,7 +171,7 @@ public class behaviour : MonoBehaviour
         //ADD CODE TO CHANGE MATERIAL OF RING TO REFLECT NEW OWNER
     }
 
-    public void listOfLocallyOwnedLocalVoters()
+    public List<GameObject> listOfLocallyOwnedLocalVoters()
     {
         Collider[] tempCollider = listOfVoters();
         List<GameObject> listOfLocalVoters = new List<GameObject>();
@@ -212,6 +212,7 @@ public class behaviour : MonoBehaviour
                     break;
             }
         }
+        return listOfLocalVoters;
     }
 
 }
