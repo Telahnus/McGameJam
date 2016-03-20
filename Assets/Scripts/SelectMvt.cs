@@ -16,9 +16,9 @@ public class SelectMvt : MonoBehaviour {
 	void Update () {
 	}
 	void OnMouseDrag(){
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		Ray rayDrag = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit) && hit.transform.gameObject.name=="hitbox") {
+		if (Physics.Raycast (rayDrag, out hit) && hit.transform.gameObject.name=="hitbox") {
 			GameObject go = hit.transform.gameObject;
 			Behaviour h = (Behaviour)go.GetComponent ("Halo");
 			shutDownLights();
@@ -26,18 +26,18 @@ public class SelectMvt : MonoBehaviour {
 		}
 	}
 	void OnMouseDown(){
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		Ray rayDown = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hitDown;
-		if (Physics.Raycast (ray, out hitDown) && hitDown.transform.gameObject.name=="hitbox") {
+		if (Physics.Raycast (rayDown, out hitDown) && hitDown.transform.gameObject.name=="hitbox") {
 			GameObject go = hitDown.transform.gameObject;
 			behaviour temp = go.GetComponentInParent<behaviour>();
 			lolv = temp.listOfLocallyOwnedLocalVoters();
 		}
 	}
 	void OnMouseUp(){
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		Ray rayUp = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hitUp;
-        if (Physics.Raycast(ray, out hitUp) && hitUp.transform.gameObject.name == "hitbox")
+        if (Physics.Raycast(rayUp, out hitUp) && hitUp.transform.gameObject.name == "hitbox")
         {
             GameObject go = hitUp.transform.gameObject;
             target = new Vector3(hitUp.point.x, 1.0f, hitUp.point.z);
