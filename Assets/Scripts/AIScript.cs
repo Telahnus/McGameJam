@@ -7,6 +7,7 @@ public class AIScript : MonoBehaviour {
     int commandWait;
     private Engine myEngine;
     private GameObject[] states;
+    //khaled=1; trump=2; cuz=3; kasch=4
 
     void Start () {
         myEngine = GameObject.Find("GameEngine").GetComponent<Engine>();
