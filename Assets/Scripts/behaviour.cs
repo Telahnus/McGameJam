@@ -37,6 +37,12 @@ public class behaviour : MonoBehaviour
         //yield return new WaitForSeconds(startWait);
         while (true)
         {
+            //if the owner is neutral, they need to stop producing units. They should stop when they hit their 
+            //garrison limit. That limit is not set yet, but should be maybe 10/20 depending on game speed.
+            if (owner == 0 && listOfLocallyOwnedLocalVoters().Count == garrisonValue)
+            {
+                yield return new WaitForSeconds(spawnWait);
+            }
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x)+ (float)0.8, spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z) + (float)1.7);
 			Vector3 myPosition = transform.position;
 			spawnPosition += myPosition;
