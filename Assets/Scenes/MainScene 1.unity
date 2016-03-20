@@ -1072,6 +1072,11 @@ MonoBehaviour:
   cruzVoters: 0
   kasichVoters: 0
   totalVoters: 0
+  neutralMaterialRef: {fileID: 0}
+  khaledMaterialRef: {fileID: 0}
+  trumpMaterialRef: {fileID: 0}
+  cruzMaterialRef: {fileID: 0}
+  kasichMaterialRef: {fileID: 0}
 --- !u!1001 &1241457076
 Prefab:
   m_ObjectHideFlags: 0

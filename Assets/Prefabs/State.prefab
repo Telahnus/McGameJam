@@ -199,7 +199,7 @@ MonoBehaviour:
   thisDestination: 
   voter: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
   garrisonValue: 5
-  spawnWait: 1
+  spawnWait: 5
   spawnValues: {x: 0, y: 0, z: 0}
   neutralVoters: 0
   khaledVoters: 0
