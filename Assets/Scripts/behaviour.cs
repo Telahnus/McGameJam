@@ -22,7 +22,7 @@ public class behaviour : MonoBehaviour
     public Material trumpMaterialRef;
     public Material cruzMaterialRef;
     public Material kasichMaterialRef;
-    //public float startWait;
+    public float startWait;
     //public float waveWait;
     private static GameObject thisState;
 
@@ -30,12 +30,12 @@ public class behaviour : MonoBehaviour
     {
         thisState = this.gameObject;
         StartCoroutine(SpawnWaves());
-        updateColourOfProvinceRing();
+        //updateColourOfProvinceRing();
     }
 
     IEnumerator SpawnWaves()
     {
-        //yield return new WaitForSeconds(startWait);
+        yield return new WaitForSeconds(startWait);
         while (true)
         {
             //if the owner is neutral, they need to stop producing units. They should stop when they hit their 
@@ -195,15 +195,23 @@ public class behaviour : MonoBehaviour
         updateColourOfProvinceRing();
     }
 
-    private void updateColourOfProvinceRing ()
+    public void updateColourOfProvinceRing ()
     {
+        updateColourOfProvinceRing(this.owner);
+    }
+
+    public void updateColourOfProvinceRing(int powner)
+    {        
         //grab the renderer of the torus in ringaround in the province
-        Renderer tempRenderer = thisState.transform.FindChild("ringaround").FindChild("Torus").GetComponent<Renderer>();
+        Renderer tempRenderer = transform.FindChild("ringaround").FindChild("Torus").GetComponent<Renderer>();
+        
         //based on the new owner change the material to reflect that
-        switch (owner)
+        switch (powner)
         {
             case 0:
+                Debug.Log("setting mat");
                 tempRenderer.material = neutralMaterialRef;
+                Debug.Log("set mat");
                 break;
             case 1:
                 tempRenderer.material = khaledMaterialRef;

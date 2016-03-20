@@ -9,6 +9,17 @@ public class Engine : MonoBehaviour {
     //on starting the game
     void Start() {
         states = GameObject.FindGameObjectsWithTag("Province");
+        assignPlayers();    
+    }
+    void assignPlayers()
+    {
+        for (int i=0; i<states.Length; i++)
+        {
+            behaviour b = states[i].GetComponent<behaviour>();
+            int r = Random.Range(0, 5);
+            b.owner = r;
+            b.updateColourOfProvinceRing(r);
+        }
     }
 
     // has the game been won? returns true if yes, false if no.

@@ -5,16 +5,14 @@ public class AIScript : MonoBehaviour {
 
     int myNumber;
     int commandWait;
+    private Engine myEngine;
+    private GameObject[] states;
 
-	// Use this for initialization
-	void Start () {
+    void Start () {
+        myEngine = GameObject.Find("GameEngine").GetComponent<Engine>();
+        states = myEngine.states;
         StartCoroutine(runAI());
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     IEnumerator runAI(){
         yield return new WaitForSeconds(commandWait);
