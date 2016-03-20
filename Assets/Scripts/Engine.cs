@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Engine : MonoBehaviour {
 
@@ -20,6 +21,20 @@ public class Engine : MonoBehaviour {
             b.owner = r;
             b.updateColourOfProvinceRing(r);
         }
+    }
+
+    public List<GameObject> stateOf (int i)
+    {
+        List<GameObject> statesOfSpecified = new List<GameObject>();
+        foreach (GameObject state in states)
+        {
+            behaviour stateCode = state.GetComponent<behaviour>();
+            if (stateCode.owner == i)
+            {
+                statesOfSpecified.Add(state);
+            }
+        }
+        return statesOfSpecified;
     }
 
     // has the game been won? returns true if yes, false if no.
