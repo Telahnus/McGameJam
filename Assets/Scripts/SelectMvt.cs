@@ -42,7 +42,7 @@ public class SelectMvt : MonoBehaviour {
 			for (int i = 0; i < lolv.Count; i++) {
 				VoterScript otherTemp = lolv [i].GetComponent<VoterScript>();
 				otherTemp.curAction = "NotChilling";
-				lolv [i].transform.position = Vector3.MoveTowards (transform.position, target, 1.0f * Time.deltaTime);
+				lolv[i].transform.position = Vector3.MoveTowards (transform.position, target, 1.0f * Time.deltaTime);
 			}
 		}
 		count = 0;
