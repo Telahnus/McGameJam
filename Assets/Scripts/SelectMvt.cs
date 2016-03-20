@@ -40,11 +40,7 @@ public class SelectMvt : MonoBehaviour {
 		if (Physics.Raycast (ray, out hit) && hit.transform.gameObject.name=="hitbox") {
 			GameObject go = hit.transform.gameObject;
 			target = new Vector3 (hit.point.x, 1.0f, hit.point.z);
-			for (int i = 0; i < lolv.Count; i++) {
-				VoterScript otherTemp = lolv [i].GetComponent<VoterScript>();
-				otherTemp.curAction = "NotChilling";
-				lolv[i].transform.position = Vector3.MoveTowards (transform.position, target, 1.0f * Time.deltaTime);
-			}
+			movement (target);
 		}
 		count = 0;
 		shutDownLights();
@@ -55,6 +51,13 @@ public class SelectMvt : MonoBehaviour {
 			j = (Behaviour)cylinders [count].GetComponent ("Halo");
 			j.enabled = false;
 			count++;
+		}
+	}
+	void movement(Vector3 target){
+		for (int i = 0; i < lolv.Count; i++) {
+			VoterScript otherTemp = lolv [i].GetComponent<VoterScript>();
+			otherTemp.curAction = "NotChilling";
+			lolv[i].transform.position = Vector3.MoveTowards (transform.position, target, 1.0f * Time.deltaTime);
 		}
 	}
 }
