@@ -27,9 +27,8 @@ public class Engine : MonoBehaviour {
             {
                 return false;
             }
-        } else{
-            return true;
         }
+        return true;
     }
 
 }
