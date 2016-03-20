@@ -12,7 +12,7 @@ public class Engine : MonoBehaviour {
     }
 
     // has the game been won? returns true if yes, false if no.
-    public bool isWin(GameObject[] states) {
+    public bool isWin() {
         behaviour temp1 = states[0].GetComponent<behaviour>();
         for (int i = 1; i < states.Length - 1; i++){
             behaviour temp2 = states[i].GetComponent<behaviour>();
