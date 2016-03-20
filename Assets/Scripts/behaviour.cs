@@ -200,7 +200,7 @@ public class behaviour : MonoBehaviour
             {
                 SceneManager.LoadScene("VICTORY");
             } else {
-                //SceneManager.LoadScene(SceneNumber);
+                SceneManager.LoadScene("LOSS");
             }
             
         }
