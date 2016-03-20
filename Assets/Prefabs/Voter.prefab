@@ -112,8 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myOwner: 0
-  curAction: '"chilling"'
+  curAction: chilling
   destination: {fileID: 0}
+  destinationLocation: {x: 0, y: 0, z: 0}
   wanderRange: 1
   wanderSpeed: 0.01
   wanderPeriod: 1
