@@ -30,6 +30,7 @@ public class behaviour : MonoBehaviour
     {
         thisState = this.gameObject;
         StartCoroutine(SpawnWaves());
+        updateColourOfProvinceRing();
     }
 
     IEnumerator SpawnWaves()
@@ -177,14 +178,40 @@ public class behaviour : MonoBehaviour
     //updates the owner based on current foreign attacker
     private void updateOwner()
     {
+        //grab the game engine object
         GameObject tempEngine = GameObject.FindGameObjectWithTag("Engine");
+        //grab the script of the object
         Engine tempEnginerScript = tempEngine.GetComponent<Engine>();
         if (tempEnginerScript.isWin())
         {
 
         }
-        //ADD CODE TO CHECK VICTORY
-        //ADD CODE TO CHANGE COLOUR (MATERIAL) OF PROVINCE TO NEW OWNER'S
+        updateColourOfProvinceRing();
+    }
+
+    private void updateColourOfProvinceRing ()
+    {
+        //grab the renderer of the torus in ringaround in the province
+        Renderer tempRenderer = thisState.transform.FindChild("ringaround").FindChild("Torus").GetComponent<Renderer>();
+        //based on the new owner change the material to reflect that
+        switch (owner)
+        {
+            case 0:
+                tempRenderer.material = neutralMaterialRef;
+                break;
+            case 1:
+                tempRenderer.material = khaledMaterialRef;
+                break;
+            case 2:
+                tempRenderer.material = trumpMaterialRef;
+                break;
+            case 3:
+                tempRenderer.material = cruzMaterialRef;
+                break;
+            case 4:
+                tempRenderer.material = kasichMaterialRef;
+                break;
+        }
     }
 
     public List<GameObject> listOfLocallyOwnedLocalVoters()
