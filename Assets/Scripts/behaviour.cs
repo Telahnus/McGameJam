@@ -44,8 +44,16 @@ public class behaviour : MonoBehaviour
             GameObject temp = null;
             //check for neutral state, they shouldn't be too high
 
+            //we start up the voter, the result is an object we "convert" to a gameobject
             temp = (GameObject) Instantiate(voter, spawnPosition, spawnRotation);
+
+            //in order to edit the variables of that object, we have to access its script
             VoterScript tempVoterScript = temp.GetComponent<VoterScript>();
+
+            //send the location of the current province to the voter
+            tempVoterScript.destinationLocation = thisState.transform.position;
+
+            //set the colour (using material) based on the owner
             Renderer tempRenderer = temp.GetComponent<Renderer>();
             switch (owner) {
                 case 0:
