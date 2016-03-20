@@ -188,7 +188,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -438,7 +438,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -550,7 +550,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -616,7 +616,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -774,7 +774,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -840,7 +840,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -1044,7 +1044,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -1336,7 +1336,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -1402,7 +1402,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -1666,7 +1666,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -1732,7 +1732,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -1844,7 +1844,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2188,7 +2188,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2300,7 +2300,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2370,7 +2370,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2436,7 +2436,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2594,7 +2594,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2706,7 +2706,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2772,7 +2772,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2838,7 +2838,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -2979,7 +2979,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3045,7 +3045,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3157,7 +3157,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3269,7 +3269,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3335,7 +3335,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3447,7 +3447,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3513,7 +3513,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3645,7 +3645,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3757,7 +3757,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3915,7 +3915,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -3981,7 +3981,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
@@ -4051,7 +4051,7 @@ Prefab:
       objectReference: {fileID: 181400, guid: c64378dac097fc446b3c7dbc6aaf63cd, type: 2}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: spawnWait
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490038, guid: 2ed14f1c6729fb0458e9d23dd62d9716, type: 2}
       propertyPath: localVoterCount
