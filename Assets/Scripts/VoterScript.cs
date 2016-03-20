@@ -46,6 +46,8 @@ public class VoterScript : MonoBehaviour {
 				move = new Vector3(tmpX, 0, tmpZ);
 
 				wanderTarget = transform.position + move;
+
+				//variables to check distance between two points (Y=0 to ignore vertical axis)
 				checkVector = new Vector3 (totalX+tmpX, 0, totalZ+tmpZ);
 				initPosition = new Vector3 (destinationLocation.x, 0, destinationLocation.z);
 
