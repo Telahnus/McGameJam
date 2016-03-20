@@ -209,9 +209,7 @@ public class behaviour : MonoBehaviour
         switch (powner)
         {
             case 0:
-                Debug.Log("setting mat");
                 tempRenderer.material = neutralMaterialRef;
-                Debug.Log("set mat");
                 break;
             case 1:
                 tempRenderer.material = khaledMaterialRef;
