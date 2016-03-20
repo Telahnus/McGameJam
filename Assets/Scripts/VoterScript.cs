@@ -46,7 +46,7 @@ public class VoterScript : MonoBehaviour {
 				move = new Vector3(tmpX, 0, tmpZ);
 
 				wanderTarget = transform.position + move;
-				checkVector = new Vector3 (totalX, 0, totalZ);
+				checkVector = new Vector3 (totalX+tmpX, 0, totalZ+tmpZ);
 				initPosition = new Vector3 (destinationLocation.x, 0, destinationLocation.z);
 
 
