@@ -286,4 +286,24 @@ public class behaviour : MonoBehaviour
         return listOfLocalVoters;
     }
 
+    public List<GameObject> getLocals()
+    {
+        List<GameObject> locals = new List<GameObject>();
+        //Vector3 centre = thisState.transform.position;
+        Collider[] collides = Physics.OverlapSphere(transform.position, 3);
+        for (int i=0; i<collides.Length; i++)
+        {
+            if (collides[i].tag != "Player") { continue; }
+            VoterScript vs = collides[i].GetComponent<VoterScript>();
+            if (vs!= null) {
+                if (vs.myOwner == owner)
+                {
+                    locals.Add(collides[i].gameObject);
+                }
+            }
+        }
+        //Debug.Log(locals.Count);
+
+        return locals;
+    }
 }

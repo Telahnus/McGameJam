@@ -9,6 +9,7 @@ public class SelectMvt : MonoBehaviour {
 	private int count=0;
 	private Behaviour j;
 	private List<GameObject> lolv = new List<GameObject>();
+    public float movespeed;
 	void Start () {
 		cylinders = GameObject.FindGameObjectsWithTag("Node");
 	}
@@ -25,25 +26,29 @@ public class SelectMvt : MonoBehaviour {
 			h.enabled = true;
 		}
 	}
+
 	void OnMouseDown(){
 		Ray rayDown = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hitDown;
 		if (Physics.Raycast (rayDown, out hitDown) && hitDown.transform.gameObject.name=="hitbox") {
 			GameObject go = hitDown.transform.gameObject;
 			behaviour temp = go.GetComponentInParent<behaviour>();
-			lolv = temp.listOfLocallyOwnedLocalVoters();
+			lolv = temp.getLocals();
+
 		}
 	}
+
 	void OnMouseUp(){
 		Ray rayUp = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hitUp;
         if (Physics.Raycast(rayUp, out hitUp) && hitUp.transform.gameObject.name == "hitbox")
         {
-            GameObject go = hitUp.transform.gameObject;
-            target = new Vector3(hitUp.point.x, 1.0f, hitUp.point.z);
+            target = hitUp.transform.position;
+            target.y = 1f;
+            //GameObject go = hitUp.transform.gameObject;
+            //target = new Vector3(hitUp.point.x, 1.0f, hitUp.point.z);
             movement(target);
         }
-
 		count = 0;
 		shutDownLights();
 	}
@@ -54,7 +59,8 @@ public class SelectMvt : MonoBehaviour {
         {
             VoterScript otherTemp = lolv[i].GetComponent<VoterScript>();
             otherTemp.curAction = "NotChilling";
-            lolv[i].transform.position = Vector3.MoveTowards(transform.position, target, 1.0f * Time.deltaTime);
+            otherTemp.setDest(target);
+            //lolv[i].transform.position = Vector3.MoveTowards(transform.position, target, movespeed * Time.deltaTime);
         }
     }
 

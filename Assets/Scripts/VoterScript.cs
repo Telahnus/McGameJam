@@ -23,22 +23,24 @@ public class VoterScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
 		totalX=destinationLocation.x;
 		totalZ=destinationLocation.z;
-	
 	}
-	
+	public void setDest(Vector3 target) {
+        destinationLocation = target;
+    }
 	// Update is called once per frame
 	void Update () {
+        if (curAction != "chilling")
+        {
+            this.transform.position = Vector3.MoveTowards(transform.position, destinationLocation, wanderSpeed);
+        }
 	    if (curAction == "chilling")
         {
-
 			if (Time.time > nextActionTime)
 			{
 				nextActionTime += wanderPeriod;
-
-				tmpX = Random.Range(-wanderRange, wanderRange);
+   				tmpX = Random.Range(-wanderRange, wanderRange);
 				totalX += tmpX;
 				tmpZ = Random.Range (-wanderRange, wanderRange);
 				totalZ += tmpZ;
@@ -50,16 +52,14 @@ public class VoterScript : MonoBehaviour {
 				//variables to check distance between two points (Y=0 to ignore vertical axis)
 				checkVector = new Vector3 (totalX+tmpX, 0, totalZ+tmpZ);
 				initPosition = new Vector3 (destinationLocation.x, 0, destinationLocation.z);
-
-
-			}
+            }
 
 			if (Vector3.Distance(initPosition,checkVector)<60) {
 				transform.position = Vector3.MoveTowards (transform.position, wanderTarget, wanderSpeed);
 				totalX += tmpX;
 				totalZ += tmpZ;
-        }
-	}
-}
+            }
+	    }
+    }
 
 }
