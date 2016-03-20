@@ -127,7 +127,7 @@ public class behaviour : MonoBehaviour
         }
 
         // check that shit though
-        if (totalVoters != 0 && areAllForeignVotersTheSame()) { updateOwner(); }
+        if (totalVoters != 0 && areAllForeignVotersTheSame()) { updateOwnerMore(); }
     }
 
     private Collider[] listOfVoters()
@@ -175,8 +175,14 @@ public class behaviour : MonoBehaviour
         return false;  
     }
 
+    public void updateOwner(int newOwner)
+    {
+        owner = newOwner;
+        updateOwnerMore();
+    }
+
     //updates the owner based on current foreign attacker
-    private void updateOwner()
+    private void updateOwnerMore()
     {
         //grab the game engine object
         GameObject tempEngine = GameObject.FindGameObjectWithTag("Engine");
