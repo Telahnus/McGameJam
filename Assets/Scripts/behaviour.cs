@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class behaviour : MonoBehaviour
 {
@@ -195,7 +196,13 @@ public class behaviour : MonoBehaviour
         Engine tempEnginerScript = tempEngine.GetComponent<Engine>();
         if (tempEnginerScript.isWin())
         {
-
+            if (khaledVoters == totalVoters)
+            {
+                SceneManager.LoadScene("VICTORY");
+            } else {
+                //SceneManager.LoadScene(SceneNumber);
+            }
+            
         }
         updateColourOfProvinceRing();
     }
