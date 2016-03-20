@@ -37,8 +37,11 @@ public class SelectMvt : MonoBehaviour {
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
 		if (Physics.Raycast (ray, out hit)) {
+			GameObject go = hit.transform.gameObject;
 			target = new Vector3 (hit.point.x, 1.0f, hit.point.z);
 			for (int i = 0; i < lolv.Count; i++) {
+				VoterScript otherTemp = lolv [i].GetComponent<VoterScript>();
+				otherTemp.curAction = "NotChilling";
 				lolv [i].transform.position = Vector3.MoveTowards (transform.position, target, 1.0f * Time.deltaTime);
 			}
 		}
