@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class SelectMvt : MonoBehaviour {
+	public Vector3 target;
+	private bool hasdest;
 
 	void Start () {
 		
@@ -15,15 +17,18 @@ public class SelectMvt : MonoBehaviour {
                 GameObject go = hit.transform.gameObject;
 				Behaviour h = (Behaviour)go.GetComponent ("Halo");
 				h.enabled = !h.enabled;
-				GameObject[] movingObjects = GameObject.FindGameObjectsWithTag ("MovingPlayer");
-				for (int i = 0; i < movingObjects.Length; i++) {
-					movingObjects [i].transform.position = Vector3.MoveTowards (transform.position, hit.collider.transform.position, 0.1f * Time.deltaTime);
+				if (Physics.Raycast(ray, out hit, 100)){
+						target = new Vector3(hit.point.x, 0.01f, hit.point.z);
+						hasdest = true;
+					if (hasdest){
+						transform.position = Vector3.MoveTowards(transform.position, target, 1.0f*Time.deltaTime);
+					}
+					GameObject[] movingObjects = GameObject.FindGameObjectsWithTag ("MovingPlayer");
+					for (int i = 0; i < movingObjects.Length; i++) {
+						movingObjects [i].transform.position = Vector3.MoveTowards (transform.position, hit.collider.transform.position, 0.1f * Time.deltaTime);
+					}
 				}
-				if (hit.collider.gameObject.name == "Voter") {
-					GameObject voter = hit.collider.gameObject;
-					voter.tag = "MovingPlayer";
-				}
-            }
+			}
 		}
 	}
 }
