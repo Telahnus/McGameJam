@@ -9,7 +9,7 @@ public class MenuScript : MonoBehaviour {
     public float fadeSpeed = 1.5f;
     public bool sceneStarting = true;
     public bool fading = false;
-    public int SceneNumber = 0;
+    public int SceneNumber;
 
     void Awake(){
         FadeImg.rectTransform.localScale = new Vector2(Screen.width, Screen.height);
@@ -42,7 +42,8 @@ public class MenuScript : MonoBehaviour {
         }
     }
 
-    public void EndScene(int SceneNumber){
+    public void EndScene(int sn){
+		SceneNumber = sn;
         Debug.Log("pressed start game");
         FadeImg.enabled = true;
         fading = true;
