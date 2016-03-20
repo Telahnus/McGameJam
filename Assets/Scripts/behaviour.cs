@@ -41,7 +41,7 @@ public class behaviour : MonoBehaviour
             //garrison limit. That limit is not set yet, but should be maybe 10/20 depending on game speed.
             if (owner == 0 && listOfLocallyOwnedLocalVoters().Count == garrisonValue)
             {
-                yield return new WaitForSeconds(spawnWait);
+                yield return new WaitForSeconds(spawnWait); yield break;
             }
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x)/*+ (float)0.8*/, spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z) /*+ (float)1.7*/);
 			Vector3 myPosition = transform.position;
@@ -192,34 +192,34 @@ public class behaviour : MonoBehaviour
             
             VoterScript voterTemp = colliderTemp.gameObject.GetComponent<VoterScript>();
             if (voterTemp == null) { continue; }
-            switch (voterTemp.myOwner)
+            switch (owner)
             {
                 case 0:
-                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 0)
+                    if (voterTemp.myOwner == 0)
                     {
                         listOfLocalVoters.Add(tempCollider[i].gameObject);
                     }
                     break;
                 case 1:
-                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 1)
+                    if (voterTemp.myOwner == 1)
                     {
                         listOfLocalVoters.Add(tempCollider[i].gameObject);
                     }
                     break;
                 case 2:
-                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 2)
+                    if (voterTemp.myOwner == 2)
                     {
                         listOfLocalVoters.Add(tempCollider[i].gameObject);
                     }
                     break;
                 case 3:
-                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 3)
+                    if (voterTemp.myOwner == 3)
                     {
                         listOfLocalVoters.Add(tempCollider[i].gameObject);
                     }
                     break;
                 case 4:
-                    if (tempCollider[i].gameObject == voter && voterTemp.myOwner == 4)
+                    if (voterTemp.myOwner == 4)
                     {
                         listOfLocalVoters.Add(tempCollider[i].gameObject);
                     }
