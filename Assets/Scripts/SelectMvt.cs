@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SelectMvt : MonoBehaviour {
 	public Vector3 target;
@@ -7,34 +8,40 @@ public class SelectMvt : MonoBehaviour {
 	private bool hasdest;
 	private int count;
 	private Behaviour j;
-
+	private List<GameObject> lolv = new List<GameObject>();
 	void Start () {
 		cylinders = GameObject.FindGameObjectsWithTag("Node");
 	}
 
 	void Update () {
-		
 	}
 	void OnMouseDrag(){
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit;
-			if (Physics.Raycast (ray, out hit)) {
-				count = 0;
-				shutDownLights ();
-				GameObject go = hit.transform.gameObject;
-				Behaviour h = (Behaviour)go.GetComponent ("Halo");
-				h.enabled = !h.enabled;
-				if (Physics.Raycast(ray, out hit, 100)){
-					target = new Vector3(hit.point.x, 0.01f, hit.point.z);
-					transform.position = Vector3.MoveTowards(transform.position, target, 1.0f*Time.deltaTime);
-					GameObject[] movingObjects = GameObject.FindGameObjectsWithTag ("MovingPlayer");
-					for (int i = 0; i < movingObjects.Length; i++) {
-						movingObjects [i].transform.position = Vector3.MoveTowards (transform.position, hit.collider.transform.position, 0.1f * Time.deltaTime);
-					}
-				}
-			}
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast (ray, out hit)) {
+			GameObject go = hit.transform.gameObject;
+			Behaviour h = (Behaviour)go.GetComponent ("Halo");
+			h.enabled = !h.enabled;
+		}
+	}
+	void OnMouseDown(){
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast (ray, out hit)) {
+			GameObject go = hit.transform.gameObject;
+			behaviour temp = go.GetComponentInParent<behaviour>();
+			lolv = temp.listOfLocallyOwnedLocalVoters();
+		}
 	}
 	void OnMouseUp(){
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast (ray, out hit)) {
+			target = new Vector3 (hit.point.x, 1.0f, hit.point.z);
+			for (int i = 0; i < lolv.Count; i++) {
+				lolv [i].transform.position = Vector3.MoveTowards (transform.position, target, 1.0f * Time.deltaTime);
+			}
+		}
 		count = 0;
 		shutDownLights();
 	}
