@@ -43,7 +43,7 @@ public class behaviour : MonoBehaviour
             {
                 yield return new WaitForSeconds(spawnWait);
             }
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x)+ (float)0.8, spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z) + (float)1.7);
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x)/*+ (float)0.8*/, spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z) /*+ (float)1.7*/);
 			Vector3 myPosition = transform.position;
 			spawnPosition += myPosition;
 			Quaternion spawnRotation = Quaternion.identity;
@@ -57,9 +57,9 @@ public class behaviour : MonoBehaviour
             VoterScript tempVoterScript = temp.GetComponent<VoterScript>();
 
             //send the location of the current province to the voter
-            float tempX = thisState.transform.position.x + (float).8;
+            float tempX = thisState.transform.position.x /*+ (float).8*/;
             float tempY = thisState.transform.position.y;
-            float tempZ = thisState.transform.position.z + (float)1.7;
+            float tempZ = thisState.transform.position.z /*+ (float)1.7*/;
             tempVoterScript.destinationLocation = new Vector3(tempX, tempY, tempZ);
 
             //set the colour (using material) based on the owner
@@ -187,7 +187,7 @@ public class behaviour : MonoBehaviour
         List<GameObject> listOfLocalVoters = new List<GameObject>();
         for (int i = 0; i < tempCollider.Length; i++) 
         {
-            VoterScript voterTemp = tempCollider[i].gameObject.GetComponent<VoterScript>();
+            VoterScript voterTemp = tempCollider[i].GetComponent<VoterScript>();
             if (voterTemp == null) { continue; }
             switch (voterTemp.myOwner)
             {
