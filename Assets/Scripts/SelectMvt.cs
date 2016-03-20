@@ -6,6 +6,7 @@ public class SelectMvt : MonoBehaviour {
 	private GameObject[] cylinders;
 	private bool hasdest;
 	private int count;
+	private Behaviour j;
 
 	void Start () {
 		cylinders = GameObject.FindGameObjectsWithTag("Node");
@@ -17,7 +18,7 @@ public class SelectMvt : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast (ray, out hit)) {
 				count = 0;
-				Invoke ("shutDownLights",0.1f);
+				shutDownLights ();
                 GameObject go = hit.transform.gameObject;
 				Behaviour h = (Behaviour)go.GetComponent ("Halo");
 				h.enabled = !h.enabled;
@@ -37,8 +38,7 @@ public class SelectMvt : MonoBehaviour {
 	}
 	void shutDownLights(){
 		while (count < cylinders.Length) {
-			Debug.Log (count);
-			Behaviour j = (Behaviour)cylinders [count].GetComponent ("Halo");
+			j = (Behaviour)cylinders [count].GetComponent ("Halo");
 			j.enabled = false;
 			count++;
 		}
