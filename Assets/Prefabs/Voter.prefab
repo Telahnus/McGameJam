@@ -116,7 +116,7 @@ MonoBehaviour:
   destination: {fileID: 0}
   destinationLocation: {x: 0, y: 0, z: 0}
   wanderRange: 1
-  wanderSpeed: 0.01
+  wanderSpeed: 0.02
   wanderPeriod: 1
 --- !u!1001 &100100000
 Prefab:
