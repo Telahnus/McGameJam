@@ -187,7 +187,10 @@ public class behaviour : MonoBehaviour
         List<GameObject> listOfLocalVoters = new List<GameObject>();
         for (int i = 0; i < tempCollider.Length; i++) 
         {
-            VoterScript voterTemp = tempCollider[i].GetComponent<VoterScript>();
+            Collider colliderTemp = tempCollider[i];
+            if (colliderTemp.gameObject.tag != "Player") { continue; }
+            
+            VoterScript voterTemp = colliderTemp.gameObject.GetComponent<VoterScript>();
             if (voterTemp == null) { continue; }
             switch (voterTemp.myOwner)
             {
