@@ -2,18 +2,19 @@
 using System.Collections;
 
 public class collisionFight : MonoBehaviour {
-
+    public int thisowner;
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	IEnumerator OnCollisionEnter(Collision col){
-		if (col.gameObject.tag=="Player") {
-			yield return new WaitForSeconds (0.2f);
-			Destroy(col.gameObject);
-			Destroy (gameObject);
-		}
-	}
+        VoterScript vs = this.GetComponent<VoterScript>();
+        thisowner = vs.myOwner;
+    }
+    void OnTriggerEnter(Collider other){   
+        if (other.tag == "Player"){
+            VoterScript vs = other.GetComponent<VoterScript>();
+            if (vs.myOwner != thisowner){
+                Destroy(other.gameObject);
+                Destroy(this);
+            }
+        }
+    }
 }
