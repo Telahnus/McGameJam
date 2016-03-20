@@ -42,7 +42,7 @@ public class behaviour : MonoBehaviour
 			spawnPosition += myPosition;
 			Quaternion spawnRotation = Quaternion.identity;
             GameObject temp = null;
-            //check for neutral state, they shouldn't be too high
+
 
             //we start up the voter, the result is an object we "convert" to a gameobject
             temp = (GameObject) Instantiate(voter, spawnPosition, spawnRotation);
@@ -72,6 +72,8 @@ public class behaviour : MonoBehaviour
                     tempRenderer.material = kasichMaterialRef;
                     break;
             }
+
+            //need to add check for neutral state, they shouldn't be too high
             yield return new WaitForSeconds(spawnWait);
         }
     }
@@ -169,7 +171,7 @@ public class behaviour : MonoBehaviour
         //ADD CODE TO CHANGE MATERIAL OF RING TO REFLECT NEW OWNER
     }
 
-    private void listOfLocallyOwnedLocalVoters()
+    public void listOfLocallyOwnedLocalVoters()
     {
         Collider[] tempCollider = listOfVoters();
         List<GameObject> listOfLocalVoters = new List<GameObject>();
