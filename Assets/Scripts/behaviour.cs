@@ -37,7 +37,7 @@ public class behaviour : MonoBehaviour
         //yield return new WaitForSeconds(startWait);
         while (true)
         {
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z));
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x)+ (float)0.8, spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z) + (float)1.7);
 			Vector3 myPosition = transform.position;
 			spawnPosition += myPosition;
 			Quaternion spawnRotation = Quaternion.identity;
@@ -51,7 +51,10 @@ public class behaviour : MonoBehaviour
             VoterScript tempVoterScript = temp.GetComponent<VoterScript>();
 
             //send the location of the current province to the voter
-            tempVoterScript.destinationLocation = thisState.transform.position;
+            float tempX = thisState.transform.position.x + (float).8;
+            float tempY = thisState.transform.position.y;
+            float tempZ = thisState.transform.position.z + (float)1.7;
+            tempVoterScript.destinationLocation = new Vector3(tempX, tempY, tempZ);
 
             //set the colour (using material) based on the owner
             Renderer tempRenderer = temp.GetComponent<Renderer>();
@@ -168,7 +171,8 @@ public class behaviour : MonoBehaviour
     //updates the owner based on current foreign attacker
     private void updateOwner()
     {
-        //ADD CODE TO CHANGE MATERIAL OF RING TO REFLECT NEW OWNER
+        //ADD CODE TO CHECK VICTORY
+        //ADD CODE TO CHANGE COLOUR (MATERIAL) OF PROVINCE TO NEW OWNER'S
     }
 
     public List<GameObject> listOfLocallyOwnedLocalVoters()

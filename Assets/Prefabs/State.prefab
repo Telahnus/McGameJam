@@ -207,6 +207,11 @@ MonoBehaviour:
   cruzVoters: 0
   kasichVoters: 0
   totalVoters: 0
+  neutralMaterialRef: {fileID: 2100000, guid: 9cad2f722eada6346abe6440c7fc32f2, type: 2}
+  khaledMaterialRef: {fileID: 2100000, guid: 81b187ccfcbf9fa42a661b6dfe0050b8, type: 2}
+  trumpMaterialRef: {fileID: 2100000, guid: 5effd5c3c21758b4b95598256e15bb15, type: 2}
+  cruzMaterialRef: {fileID: 2100000, guid: f03038c0b806b81429c62002499f439a, type: 2}
+  kasichMaterialRef: {fileID: 2100000, guid: 35294ec78bc9d154b8df803eba230184, type: 2}
 --- !u!136 &13647256
 CapsuleCollider:
   m_ObjectHideFlags: 1
