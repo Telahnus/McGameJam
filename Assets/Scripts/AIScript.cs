@@ -3,18 +3,22 @@ using System.Collections;
 
 public class AIScript : MonoBehaviour {
 
-    int myNumber;
-    int commandWait;
+    public int myNumber;
+    public int commandWait;
     private Engine myEngine;
     private GameObject[] states;
 
-    void Start () {
+    void Awake () {
         myEngine = GameObject.Find("GameEngine").GetComponent<Engine>();
-        states = myEngine.states;
+        states = GameObject.FindGameObjectsWithTag("Province");
         StartCoroutine(runAI());
     }
 
     IEnumerator runAI(){
         yield return new WaitForSeconds(commandWait);
+        int r = Random.Range(0, 38);
+        GameObject curState = states[r];
+
+    
     }
 }
