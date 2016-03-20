@@ -6,7 +6,7 @@ public class SelectMvt : MonoBehaviour {
 	public Vector3 target;
 	private GameObject[] cylinders;
 	private bool hasdest;
-	private int count;
+	private int count=0;
 	private Behaviour j;
 	private List<GameObject> lolv = new List<GameObject>();
 	void Start () {
@@ -18,16 +18,17 @@ public class SelectMvt : MonoBehaviour {
 	void OnMouseDrag(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit)) {
+		if (Physics.Raycast (ray, out hit) && hit.transform.gameObject.name=="hitbox") {
 			GameObject go = hit.transform.gameObject;
 			Behaviour h = (Behaviour)go.GetComponent ("Halo");
-			h.enabled = !h.enabled;
+			shutDownLights ();
+			h.enabled = true;
 		}
 	}
 	void OnMouseDown(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit)) {
+		if (Physics.Raycast (ray, out hit) && hit.transform.gameObject.name=="hitbox") {
 			GameObject go = hit.transform.gameObject;
 			behaviour temp = go.GetComponentInParent<behaviour>();
 			lolv = temp.listOfLocallyOwnedLocalVoters();
@@ -36,7 +37,7 @@ public class SelectMvt : MonoBehaviour {
 	void OnMouseUp(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit)) {
+		if (Physics.Raycast (ray, out hit) && hit.transform.gameObject.name=="hitbox") {
 			GameObject go = hit.transform.gameObject;
 			target = new Vector3 (hit.point.x, 1.0f, hit.point.z);
 			for (int i = 0; i < lolv.Count; i++) {
