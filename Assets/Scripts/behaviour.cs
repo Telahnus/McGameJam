@@ -188,6 +188,7 @@ public class behaviour : MonoBehaviour
         for (int i = 0; i < tempCollider.Length; i++) 
         {
             VoterScript voterTemp = tempCollider[i].GetComponent<VoterScript>();
+            if (voterTemp == null) { continue; }
             switch (voterTemp.myOwner)
             {
                 case 0:
