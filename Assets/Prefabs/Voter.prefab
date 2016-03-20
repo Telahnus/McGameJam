@@ -115,9 +115,9 @@ MonoBehaviour:
   curAction: chilling
   destination: {fileID: 0}
   destinationLocation: {x: 0, y: 0, z: 0}
-  wanderRange: 1
+  wanderRange: 0.5
   wanderSpeed: 0.02
-  wanderPeriod: 1
+  wanderPeriod: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
