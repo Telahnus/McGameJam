@@ -3,10 +3,12 @@ using System.Collections;
 
 public class SelectMvt : MonoBehaviour {
 	public Vector3 target;
+	private GameObject[] cylinders;
 	private bool hasdest;
+	private int count;
 
 	void Start () {
-		
+		cylinders = GameObject.FindGameObjectsWithTag("Node");
 	}
 
 	void Update () {
@@ -14,6 +16,8 @@ public class SelectMvt : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if (Physics.Raycast (ray, out hit)) {
+				count = 0;
+				Invoke ("shutDownLights",0.1f);
                 GameObject go = hit.transform.gameObject;
 				Behaviour h = (Behaviour)go.GetComponent ("Halo");
 				h.enabled = !h.enabled;
@@ -29,6 +33,14 @@ public class SelectMvt : MonoBehaviour {
 					}
 				}
 			}
+		}
+	}
+	void shutDownLights(){
+		while (count < cylinders.Length) {
+			Debug.Log (count);
+			Behaviour j = (Behaviour)cylinders [count].GetComponent ("Halo");
+			j.enabled = false;
+			count++;
 		}
 	}
 }
