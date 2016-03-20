@@ -6,6 +6,7 @@ public class VoterScript : MonoBehaviour {
     public int myOwner;
     public string curAction;
     public GameObject destination;
+    public Vector3 destinationLocation;
     // stuff for wandering
     public float wanderRange;
     private Vector3 wanderTarget;
@@ -21,7 +22,7 @@ public class VoterScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (curAction=="atdestination")
+	    if (curAction == "chilling")
         {
             if (Time.time > nextActionTime)
             {

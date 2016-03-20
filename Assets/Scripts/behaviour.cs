@@ -17,6 +17,11 @@ public class behaviour : MonoBehaviour
     public int cruzVoters;
     public int kasichVoters;
     public int totalVoters;
+    public Material neutralMaterialRef;
+    public Material khaledMaterialRef;
+    public Material trumpMaterialRef;
+    public Material cruzMaterialRef;
+    public Material kasichMaterialRef;
     //public float startWait;
     //public float waveWait;
     private static GameObject thisState;
@@ -36,16 +41,29 @@ public class behaviour : MonoBehaviour
 			Vector3 myPosition = transform.position;
 			spawnPosition += myPosition;
 			Quaternion spawnRotation = Quaternion.identity;
-            Object temp = null;
+            GameObject temp = null;
             //check for neutral state, they shouldn't be too high
 
-            temp = Instantiate(voter, spawnPosition, spawnRotation);
-            //tempOwner = temp.owner;
-            //switch (tempOwner) {
-            // case 0:
-            // case 1:
-            // case 2:
-            // }
+            temp = (GameObject) Instantiate(voter, spawnPosition, spawnRotation);
+            VoterScript tempVoterScript = temp.GetComponent<VoterScript>();
+            Renderer tempRenderer = temp.GetComponent<Renderer>();
+            switch (owner) {
+                case 0:
+                    tempRenderer.material = neutralMaterialRef;
+                    break;
+                case 1:
+                    tempRenderer.material = khaledMaterialRef;
+                    break;
+                case 2:
+                    tempRenderer.material = trumpMaterialRef;
+                    break;
+                case 3:
+                    tempRenderer.material = cruzMaterialRef;
+                    break;
+                case 4:
+                    tempRenderer.material = kasichMaterialRef;
+                    break;
+            }
             yield return new WaitForSeconds(spawnWait);
         }
     }
