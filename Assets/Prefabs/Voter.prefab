@@ -111,12 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf9260d0faec40449c55417fc3b852e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curState: {fileID: 0}
   myOwner: 0
-  curAction: 
+  curAction: atdestination
   destination: {fileID: 0}
-  engaged: 0
-  atDestination: 1
   wanderRange: 1
   wanderSpeed: 0.01
   wanderPeriod: 1
